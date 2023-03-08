@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background: radial-gradient(lightblue,yellow);
+    background: beige;
 }
 .calc {
     display: grid;
@@ -8,18 +8,47 @@ body{
     justify-content: center;
     grid-template-columns: repeat(4, 8rem);
     grid-template-rows: minmax(7rem, auto ) repeat(5,6rem);
+    border-radius: 15px;
 }
 .Double{
     grid-column: span 2;
 }
 .output{
     grid-column: 1/-1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 15px;
 }
+.output .previousOp{
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+}
+.output .CurrentOp{
+    color: white;
+    font-size: 2rem;
+}
+
 .calc > button{
     cursor: pointer;
     font-size: 3rem;
-    border: 2px solid black;
-    outline-color: black;
-    background-color: lightskyblue;
+    font-family: "Comic Sans MS";
+    color: white;
+    border: 1px solid white;
+    outline-color: white;
+    background-color: black;
+    border-radius: 12px;
+
 }
+.calc > button:focus,
+.calc > button:hover{
+    background-color: rgba(0,0,0,0.75);
+}
+
+
 
